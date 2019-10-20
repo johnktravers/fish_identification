@@ -1,6 +1,6 @@
-class CreateFishFamilies < ActiveRecord::Migration[5.1]
+class CreateFamilies < ActiveRecord::Migration[5.1]
   def change
-    create_table :fish_families do |t|
+    create_table :families do |t|
       t.string :name
       t.string :english
       t.string :spanish

@@ -10,7 +10,7 @@ RSpec.describe Fish, type: :model do
   end
 
   describe 'relationships' do
-    it { should belong_to :fish_family }
+    it { should belong_to :family }
   end
 
 end

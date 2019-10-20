@@ -5,7 +5,7 @@ class CreateFish < ActiveRecord::Migration[5.1]
       t.string :english
       t.string :spanish
       t.string :image
-      t.references :fish_family, foreign_key: true
+      t.references :family, foreign_key: true
 
       t.timestamps
     end

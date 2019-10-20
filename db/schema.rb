@@ -15,18 +15,7 @@ ActiveRecord::Schema.define(version: 20191020200725) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "fish", force: :cascade do |t|
-    t.string "scientific_name"
-    t.string "english"
-    t.string "spanish"
-    t.string "image"
-    t.bigint "fish_family_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["fish_family_id"], name: "index_fish_on_fish_family_id"
-  end
-
-  create_table "fish_families", force: :cascade do |t|
+  create_table "families", force: :cascade do |t|
     t.string "name"
     t.string "english"
     t.string "spanish"
@@ -35,5 +24,16 @@ ActiveRecord::Schema.define(version: 20191020200725) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "fish", "fish_families"
+  create_table "fish", force: :cascade do |t|
+    t.string "scientific_name"
+    t.string "english"
+    t.string "spanish"
+    t.string "image"
+    t.bigint "family_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["family_id"], name: "index_fish_on_family_id"
+  end
+
+  add_foreign_key "fish", "families"
 end
