@@ -1,8 +1,8 @@
-class FishFamily < ApplicationRecord
-  validates_presence_of :name
+class Fish < ApplicationRecord
+  validates_presence_of :scientific_name
   validates_presence_of :english
   validates_presence_of :spanish
   validates_presence_of :image
 
-  has_many :fish
+  belongs_to :fish_family
 end
