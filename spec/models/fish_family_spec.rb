@@ -9,4 +9,8 @@ RSpec.describe FishFamily, type: :model do
     it { should validate_presence_of :image }
   end
 
+  describe 'relationships' do
+    it { should have_many :fish }
+  end
+
 end
