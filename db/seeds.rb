@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-FishFamily.create([
+fish_families = FishFamily.create([
   {
     name: 'Chaetodontidae',
     english: 'Butterflyfish',
@@ -114,5 +114,50 @@ FishFamily.create([
     english: 'Spadefishes',
     spanish: 'Paguala',
     image: 'https://www.fishbase.se/images/thumbnails/gif/tn_EPHIPPT0.gif'
+  }
+])
+
+fish_families[0].fish.create([
+  {
+    scientific_name: 'Forcipiger flavissimus',
+    english: 'Forcepsfish',
+    spanish: 'Mariposa Hocicona',
+    image: 'https://www.fishbase.se/images/species/Fofla_u6.jpg'
+  },
+  {
+    scientific_name: 'Chaetodon humeralis',
+    english: 'Threebanded Butterflyfish',
+    spanish: 'Mariposa Muñeca',
+    image: 'https://www.fishbase.se/photos/workimagethumb.php?s=http://www.fishbase.se/tools/UploadPhoto/uploads/1435108272_108.64.185.41.jpg&w=600'
+  }
+])
+
+fish_families[1].fish.create([
+  {
+    scientific_name: 'Sphyraena qenie',
+    english: 'Blackfin Barracuda',
+    spanish: 'Barracuda Aleta Negra',
+    image: 'https://www.fishbase.se/images/species/Spqen_u6.jpg'
+  },
+  {
+    scientific_name: 'Sphyraena argentea',
+    english: 'Pacific Barracuda',
+    spanish: 'Barracuda Plateada',
+    image: 'http://www.fishbase.se/tools/UploadPhoto/uploads/pacificbarracuda.jpg'
+  }
+])
+
+fish_families[3].fish.create([
+  {
+    scientific_name: 'Pomacanthus zonipectus',
+    english: 'Cortez Angelfish',
+    spanish: 'Ángel de Cortés',
+    image: 'https://www.fishbase.se/images/species/Pozon_u4.jpg'
+  },
+  {
+    scientific_name: 'Holacanthus clarionensis',
+    english: 'Clarion Angelfish',
+    spanish: 'Ángel de Clarión',
+    image: 'https://www.fishbase.se/photos/workimagethumb.php?s=http://www.fishbase.se/tools/UploadPhoto/uploads/1446041641_173.19.96.111.jpg&w=600'
   }
 ])
