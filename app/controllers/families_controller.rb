@@ -4,4 +4,8 @@ class FamiliesController < ApplicationController
     @families = Family.all
   end
 
+  def show
+    @family = Family.find(params[:id])
+  end
+
 end
