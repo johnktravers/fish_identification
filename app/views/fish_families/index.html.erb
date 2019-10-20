@@ -1,0 +1,10 @@
+<h1>Costa Rica's Pacific Fish Families</h1>
+
+<% @fish_families.each do |family| %>
+  <section id='family-<%= family.id %>'>
+    <h4><%= family.name %></h4>
+    <p><%= family.english %></p>
+    <p><%= family.spanish %></p>
+    <img src="<%= family.image %>">
+  </section>
+<% end %>
