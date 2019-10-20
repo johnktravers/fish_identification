@@ -1,0 +1,12 @@
+<h1 class='mt-4 mb-2 text-center'>Costa Rica's Pacific Fish Families</h1>
+
+<section class="container-fluid row justify-content-center">
+  <% @fish_families.each do |family| %>
+    <article class='card card-body bg-light m-3 p-4 col-md-3' id='family-<%= family.id %>'>
+      <h4><%= family.name %></h4>
+      <p><%= family.english %></p>
+      <p><%= family.spanish %></p>
+      <img class="family-img" src="<%= family.image %>">
+    </article>
+  <% end %>
+</section>
