@@ -35,4 +35,14 @@ RSpec.describe 'family index page', type: :feature do
     end
   end
 
+  it 'can click on family name to go to the family show page' do
+    visit '/families'
+    click_link("#{@butterflyfish.name}")
+    expect(current_path).to eq("/families/#{@butterflyfish.id}")
+
+    visit '/families'
+    click_link("#{@surgeonfish.name}")
+    expect(current_path).to eq("/families/#{@surgeonfish.id}")
+  end
+
 end
