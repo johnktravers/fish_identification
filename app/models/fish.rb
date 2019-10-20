@@ -4,5 +4,5 @@ class Fish < ApplicationRecord
   validates_presence_of :spanish
   validates_presence_of :image
 
-  belongs_to :fish_family
+  belongs_to :family
 end

@@ -1,15 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe 'fish family index page', type: :feature do
+RSpec.describe 'family index page', type: :feature do
 
   before :each do
-    @butterflyfish = FishFamily.create(
+    @butterflyfish = Family.create(
       name: 'Chaetodontidae',
       english: 'Butterflyfish',
       spanish: 'Pez Mariposa',
       image: 'https://www.fishbase.se/images/thumbnails/gif/tn_CHAETOT0.gif'
     )
-    @surgeonfish = FishFamily.create(
+    @surgeonfish = Family.create(
       name: 'Acanthuridae',
       english: 'Surgeonfish',
       spanish: 'Pez Cirujano',
@@ -17,8 +17,8 @@ RSpec.describe 'fish family index page', type: :feature do
     )
   end
 
-  it 'displays a list of all fish families and their images' do
-    visit '/fish_families'
+  it 'displays a list of all families and their images' do
+    visit '/families'
 
     within "#family-#{@butterflyfish.id}" do
       expect(page).to have_content(@butterflyfish.name)

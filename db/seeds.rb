@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-fish_families = FishFamily.create([
+families = Family.create([
   {
     name: 'Chaetodontidae',
     english: 'Butterflyfish',
@@ -117,7 +117,7 @@ fish_families = FishFamily.create([
   }
 ])
 
-fish_families[0].fish.create([
+families[0].fish.create([
   {
     scientific_name: 'Forcipiger flavissimus',
     english: 'Forcepsfish',
@@ -132,7 +132,7 @@ fish_families[0].fish.create([
   }
 ])
 
-fish_families[1].fish.create([
+families[1].fish.create([
   {
     scientific_name: 'Sphyraena qenie',
     english: 'Blackfin Barracuda',
@@ -147,7 +147,7 @@ fish_families[1].fish.create([
   }
 ])
 
-fish_families[3].fish.create([
+families[3].fish.create([
   {
     scientific_name: 'Pomacanthus zonipectus',
     english: 'Cortez Angelfish',
