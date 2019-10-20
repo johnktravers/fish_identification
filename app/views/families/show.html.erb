@@ -1,0 +1,12 @@
+<h1 class='mt-4 mb-3 text-center'>Fish in Family <%= @family.name %> (<%= @family.english %>)</h1>
+
+<section class="container-fluid row justify-content-center">
+  <% @family.fish.each do |fish| %>
+    <article class='card card-body bg-light m-3 p-4 col-md-5' id='fish-<%= fish.id %>'>
+      <h4 class="text-center"><%= fish.english %></h4>
+      <h6 class="text-center"><%= fish.spanish %></h6>
+      <p class="scientific text-center"><%= fish.scientific_name %></p>
+      <img class="img center mt-2 mb-2" src="<%= fish.image %>">
+    </article>
+  <% end %>
+</section>
