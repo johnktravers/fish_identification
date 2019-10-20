@@ -13,3 +13,16 @@
 
  // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
+.scientific {
+  font-style: italic;
+}
+
+img {
+  width: 80%;
+}
+
+img.center {
+ display: block;
+ margin: 0 auto;
+}
