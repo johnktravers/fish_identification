@@ -1,8 +1,13 @@
 class Fish < ApplicationRecord
-  validates_presence_of :scientific_name
-  validates_presence_of :english
-  validates_presence_of :spanish
-  validates_presence_of :image
+  validates_presence_of :species_code,
+                        :family_code,
+                        :genus,
+                        :species,
+                        :english,
+                        :image
+
+  validates_numericality_of :species_code, only_integer: true, greater_than: 0
+  validates_numericality_of :family_code, only_integer: true, greater_than: 0
 
   belongs_to :family
 end
