@@ -40,7 +40,7 @@ family_hash = JSON.parse(family_file)
 
 family_hash['data'].each do |datum|
   if family_codes.include?(datum['FamCode'])
-    Family.create(
+    Family.create!(
       family_code: datum['FamCode'],
       name: datum['Family'],
       english: datum['CommonName'],
@@ -48,5 +48,28 @@ family_hash['data'].each do |datum|
       species: datum['Species'],
       image: datum['FamPic']
     )
+  end
+end
+
+# ----------------------- Species ----------------------- #
+
+page_nums = (1..7).to_a
+
+page_nums.each do |page_num|
+  species_file = File.read("app/assets/data/species_data_#{page_num}.json")
+  species_hash = JSON.parse(species_file)
+
+  species_hash['data'].each do |datum|
+    if family_codes.include?(datum['FamCode']) && datum['Pic'] && datum['FBname']
+      family = Family.find_by(family_code: datum['FamCode'])
+      family.fish.create!(
+        species_code: datum['SpecCode'],
+        family_code: datum['FamCode'],
+        genus: datum['Genus'],
+        species: datum['Species'],
+        english: datum['FBname'],
+        image: datum['Pic']
+      )
+    end
   end
 end
