@@ -16,9 +16,11 @@ ActiveRecord::Schema.define(version: 20191020200725) do
   enable_extension "plpgsql"
 
   create_table "families", force: :cascade do |t|
+    t.integer "family_code"
     t.string "name"
     t.string "english"
-    t.string "spanish"
+    t.integer "genera"
+    t.integer "species"
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
