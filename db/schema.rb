@@ -27,9 +27,11 @@ ActiveRecord::Schema.define(version: 20191020200725) do
   end
 
   create_table "fish", force: :cascade do |t|
-    t.string "scientific_name"
+    t.integer "species_code"
+    t.integer "family_code"
+    t.string "genus"
+    t.string "species"
     t.string "english"
-    t.string "spanish"
     t.string "image"
     t.bigint "family_id"
     t.datetime "created_at", null: false
