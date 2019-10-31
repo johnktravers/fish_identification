@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Bootstrap for CSS styling and Javascript interactivity
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+gem 'json'
+gem 'awesome_print'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -42,7 +44,6 @@ group :development, :test do
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'pry'
-  gem 'awesome_print'
   gem 'simplecov'
 end
 
