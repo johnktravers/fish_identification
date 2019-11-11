@@ -6,158 +6,109 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-families = Family.create([
-  {
-    name: 'Chaetodontidae',
-    english: 'Butterflyfish',
-    spanish: 'Pez Mariposa',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_CHAETOT0.gif'
-  },
-  {
-    name: 'Sphyraenidae',
-    english: 'Barracudas',
-    spanish: 'Barracudas',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_SPHYRAT0.gif'
-  },
-  {
-    name: 'Nomeidae',
-    english: 'Driftfishes',
-    spanish: 'Flotador',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_NOMEIDT0.gif'
-  },
-  {
-    name: 'Pomacanthidae',
-    english: 'Angelfish',
-    spanish: 'Pez Ángel',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_POMACAT0.gif'
-  },
-  {
-    name: 'Elopidae',
-    english: 'Tarpons',
-    spanish: 'Tarpón',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_ELOPIDT0.gif'
-  },
-  {
-    name: 'Gerreidae',
-    english: 'Mojarras',
-    spanish: 'Mojarra',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_GERREIT0.gif'
-  },
-  {
-    name: 'Acanthuridae',
-    english: 'Surgeonfish',
-    spanish: 'Pez Cirujano',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_ACANTHT1.gif'
-  },
-  {
-    name: 'Chanidae',
-    english: 'Milkfishes',
-    spanish: 'Sabalote',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_CHANIDT0.gif'
-  },
-  {
-    name: 'Kuhliidae',
-    english: 'Flagtails',
-    spanish: 'Bandera',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_KUHLIIT0.gif'
-  },
-  {
-    name: 'Carangidae',
-    english: 'Jacks',
-    spanish: 'Jurel',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_CARANGT0.gif'
-  },
-  {
-    name: 'Kyphosidae',
-    english: 'Sea Chubs',
-    spanish: 'Chopa',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_KYPHOST0.gif'
-  },
-  {
-    name: 'Atherinidae',
-    english: 'Silversides',
-    spanish: 'Pejerrey',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_ATHERIT0.gif'
-  },
-  {
-    name: 'Scombridae',
-    english: 'Mackerels & Tunas',
-    spanish: 'Macarela & Atún',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_SCOMBRT0.gif'
-  },
-  {
-    name: 'Embiotocidae',
-    english: 'Surfperches',
-    spanish: 'Percas',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_EMBIOTT0.gif'
-  },
-  {
-    name: 'Hemiramphidae',
-    english: 'Halfbeaks',
-    spanish: 'Pez Aguja',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_HEMIRAT0.gif'
-  },
-  {
-    name: 'Istiophoridae',
-    english: 'Billfishes',
-    spanish: 'Marlines',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_ISTIOPT0.gif'
-  },
-  {
-    name: 'Sparidae',
-    english: 'Porgies',
-    spanish: 'Pargo',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_SPARIDT0.gif'
-  },
-  {
-    name: 'Ephippidae',
-    english: 'Spadefishes',
-    spanish: 'Paguala',
-    image: 'https://www.fishbase.se/images/thumbnails/gif/tn_EPHIPPT0.gif'
-  }
-])
+# ----------------------- Families ----------------------- #
 
-families[0].fish.create([
-  {
-    scientific_name: 'Forcipiger flavissimus',
-    english: 'Forcepsfish',
-    spanish: 'Mariposa Hocicona',
-    image: 'https://www.fishbase.se/images/species/Fofla_u6.jpg'
-  },
-  {
-    scientific_name: 'Chaetodon humeralis',
-    english: 'Threebanded Butterflyfish',
-    spanish: 'Mariposa Muñeca',
-    image: 'https://www.fishbase.se/photos/workimagethumb.php?s=http://www.fishbase.se/tools/UploadPhoto/uploads/1435108272_108.64.185.41.jpg&w=600'
-  }
-])
+families = {
+        butterflyfishes: 343,
+        barracudas: 360,
+        driftfishes: 422,
+        angelfishes: 460,
+        tarpons: 47,
+        mojarras: 326,
+        surgeonfishes: 412,
+        milkfish: 98,
+        aholeholes: 301,
+        jacks: 314,
+        sea_chubs: 339,
+        silversides: 623,
+        mackerels_and_tunas: 416,
+        surfperches: 348,
+        halfbeaks: 475,
+        billfishes: 419,
+        porgies: 330,
+        spadefishes: 340,
+        dolphinfishes: 315,
+        sea_basses: 289,
+        bigeyes: 303,
+        molas: 450,
+        cardinalfishes: 304,
+        grunts: 327,
+        parrotfishes: 364,
+        gobies: 405,
+        snappers: 323,
+        wrasses: 362,
+        blennies: 392,
+        damselfishes: 350,
+        jawfishes: 366,
+        squirrelfishes: 243,
+        frogfishes: 192,
+        batfishes: 194,
+        lizardfishes: 160,
+        filefishes: 517,
+        searobins: 266,
+        hawkfishes: 352,
+        remoras: 313,
+        tonguefishes: 442,
+        toadfishes: 189,
+        puffers: 448,
+        flounders: 439,
+        scorpionfishes: 264,
+        porcupinefishes: 449,
+        clingfishes: 434,
+        boxfishes: 446,
+        drums_or_croakers: 331,
+        stargazers: 378,
+        triggerfishes: 445,
+        tilefishes: 308,
+        goatfishes: 332,
+        snake_eels: 66,
+        trumpetfishes: 253,
+        requiem_sharks: 11,
+        cornetfishes: 254,
+        hammerhead_sharks: 12,
+        pipefishes_and_seahorses: 258,
+        eagle_and_manta_rays: 22,
+        moray_eels: 56,
+        conger_eels: 62
+      }
 
-families[1].fish.create([
-  {
-    scientific_name: 'Sphyraena qenie',
-    english: 'Blackfin Barracuda',
-    spanish: 'Barracuda Aleta Negra',
-    image: 'https://www.fishbase.se/images/species/Spqen_u6.jpg'
-  },
-  {
-    scientific_name: 'Sphyraena argentea',
-    english: 'Pacific Barracuda',
-    spanish: 'Barracuda Plateada',
-    image: 'http://www.fishbase.se/tools/UploadPhoto/uploads/pacificbarracuda.jpg'
-  }
-])
+family_codes = families.values
 
-families[3].fish.create([
-  {
-    scientific_name: 'Pomacanthus zonipectus',
-    english: 'Cortez Angelfish',
-    spanish: 'Ángel de Cortés',
-    image: 'https://www.fishbase.se/images/species/Pozon_u4.jpg'
-  },
-  {
-    scientific_name: 'Holacanthus clarionensis',
-    english: 'Clarion Angelfish',
-    spanish: 'Ángel de Clarión',
-    image: 'https://www.fishbase.se/photos/workimagethumb.php?s=http://www.fishbase.se/tools/UploadPhoto/uploads/1446041641_173.19.96.111.jpg&w=600'
-  }
-])
+family_file = File.read('app/assets/data/family_data.json')
+family_hash = JSON.parse(family_file)
+
+family_hash['data'].each do |datum|
+  if family_codes.include?(datum['FamCode'])
+    Family.create!(
+      family_code: datum['FamCode'],
+      name: datum['Family'],
+      english: datum['CommonName'],
+      genera: datum['Genera'],
+      species: datum['Species'],
+      image: datum['FamPic']
+    )
+  end
+end
+
+# ----------------------- Species ----------------------- #
+
+page_nums = (1..7).to_a
+
+page_nums.each do |page_num|
+  species_file = File.read("app/assets/data/species_data_#{page_num}.json")
+  species_hash = JSON.parse(species_file)
+
+  species_hash['data'].each do |datum|
+    if family_codes.include?(datum['FamCode']) && datum['Pic'] && datum['FBname']
+      family = Family.find_by(family_code: datum['FamCode'])
+      family.fish.create!(
+        species_code: datum['SpecCode'],
+        family_code: datum['FamCode'],
+        genus: datum['Genus'],
+        species: datum['Species'],
+        english: datum['FBname'],
+        image: datum['Pic']
+      )
+    end
+  end
+end

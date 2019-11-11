@@ -16,18 +16,22 @@ ActiveRecord::Schema.define(version: 20191020200725) do
   enable_extension "plpgsql"
 
   create_table "families", force: :cascade do |t|
+    t.integer "family_code"
     t.string "name"
     t.string "english"
-    t.string "spanish"
+    t.integer "genera"
+    t.integer "species"
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "fish", force: :cascade do |t|
-    t.string "scientific_name"
+    t.integer "species_code"
+    t.integer "family_code"
+    t.string "genus"
+    t.string "species"
     t.string "english"
-    t.string "spanish"
     t.string "image"
     t.bigint "family_id"
     t.datetime "created_at", null: false
