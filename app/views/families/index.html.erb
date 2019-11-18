@@ -2,11 +2,10 @@
 
 <section class="container-fluid row justify-content-center">
   <% @families.each do |family| %>
-    <article class='card card-body bg-light m-3 p-4 col-md-3' id='family-<%= family.id %>'>
+    <article class='card card-body bg-light m-2 p-2 col-md-2' id='family-<%= family.id %>'>
       <h4 class="text-center"><%= link_to family.english, "/families/#{family.id}" %></h4>
-      <h6 class="text-center"><%= family.spanish %></h6>
       <p class="scientific text-center"><%= family.name %></p>
-      <img class="family-img center mt-2 mb-2" src="<%= family.image %>">
+      <img class="family-img center mt-2 mb-2" src="<%= "https://www.fishbase.se/images/thumbnails/gif/tn_#{family.image}.gif" %>">
     </article>
   <% end %>
 </section>
